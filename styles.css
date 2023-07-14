@@ -62,3 +62,7 @@ body {
 	background-color: #555;
   }
   
+  .selected {
+	border-color: #0077ff;
+  }
+  
