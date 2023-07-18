@@ -22,7 +22,9 @@ function generateInputField(day) {
 	generateInputField(daysOfWeek[i]);
   }
 
-  function generateMealPlan() {
+
+
+function generateMealPlan() {
 	// Get user inputs
 	var name = document.getElementById("name").value;
 	var email = document.getElementById("email").value;
@@ -63,7 +65,12 @@ function generateInputField(day) {
   
 	mealPlanPage += "</body>\n";
 	mealPlanPage += "</html>";
-  
+
+	if (!validateEmail(email)) {
+		alert("Please enter a valid email address.");
+		return;
+	  }
+	  
 	var mealPlanWindow = window.open();
 	mealPlanWindow.document.write(mealPlanPage);
   }
